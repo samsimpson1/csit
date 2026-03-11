@@ -9,7 +9,7 @@ gdad:
 
 all:
   name: "GDS"
-  comment: "Dates relevant for most GDSers."
+  comment: "Dates relevant for most GDSers. Includes GDaD and pay dates."
   combine:
     - payday
     - gdad
