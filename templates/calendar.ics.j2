@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//{{ csit_hostname }}//{{ csit_name }}//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+{%- for event in events %}
+BEGIN:VEVENT
+SUMMARY:{{ event.name }}
+UID:{{ event.uid }}@{{ csit_hostname }}
+SEQUENCE:0
+STATUS:CONFIRMED
+DTSTART:{{ event.ics_date }}
+DTEND:{{ event.ics_date }}
+DTSTAMP:{{ ics_timestamp }}
+END:VEVENT
+{%- endfor %}
+END:VCALENDAR

@@ -1,0 +1,15 @@
+payday:
+  name: "Pay Day"
+  comment: "Pay dates. Includes the past 6 months and the next 12 months."
+  command: payday.py
+
+gdad:
+  name: "Government Digital and Data"
+  file: gdad.dates
+
+all:
+  name: "GDS"
+  comment: "Dates relevant for most GDSers."
+  combine:
+    - payday
+    - gdad
