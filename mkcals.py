@@ -31,7 +31,7 @@ def render_calendar(events):
         csit_hostname="csit.srv.simpson.id",
         csit_name="Calendar for Science, Innovation and Technology",
         ics_timestamp=ics_timestamp,
-    )
+    ).replace("\n", "\r\n")
 
 
 def parse_dates(dates: str):
