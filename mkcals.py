@@ -28,8 +28,8 @@ def render_calendar(events):
     template = env.get_template("calendar.ics.j2")
     return template.render(
         events=events,
-        csit_hostname="csit.srv.simpson.id",
-        csit_name="Calendar for Science, Innovation and Technology",
+        csit_hostname="samsimpson1.github.io",
+        csit_name="CSIT",
         ics_timestamp=ics_timestamp,
     ).replace("\n", "\r\n")
 
