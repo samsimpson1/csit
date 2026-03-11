@@ -110,8 +110,17 @@ def render_and_write_calendar(id, events):
         f.write(rendered)
 
 
+def render_and_write_index():
+    calendars = load_calendars_config()
+    template = env.get_template("index.html.j2")
+    rendered = template.render(calendars=calendars)
+    with open(join("output", "index.html"), "w") as f:
+        f.write(rendered)
+
 if __name__ == "__main__":
     makedirs("output", exist_ok=True)
+    
+    render_and_write_index()
 
     calendars = build_calendar_events()
 

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Calendar for Science, Innovation and Technology</title>
+  </head>
+  <body>
+    <h1>Calendars</h1>
+    <ul>
+    {% for calendar_id in calendars %}
+    {% set calendar = calendars[calendar_id] %}
+    <li>
+      <a href="{{ calendar_id }}.ics">{{ calendar.name }}</a>
+      {% if "comment" in calendar %} - {{ calendar.comment }}{% endif %}
+    </li>
+    {% endfor %}
+    </ul>
+  </body>
+</html>
